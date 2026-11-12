@@ -1,14 +1,13 @@
 {
   "name": "@tahabakhit/pi-statusline",
-  "version": "0.1.0",
-  "description": "A Pi header, native editor, context footer, token speed, and message timestamps.",
+  "version": "0.2.0",
+  "description": "A footer for Pi with directory, branch, model, and context usage.",
   "type": "module",
   "license": "MIT",
   "author": "Taha Bakhit",
   "keywords": [
     "pi-package",
     "pi-extension",
-    "statusline",
     "footer"
   ],
   "files": [
@@ -26,7 +25,6 @@
     "test": "node --test test/*.test.mjs"
   },
   "peerDependencies": {
-    "@earendil-works/pi-coding-agent": "*",
     "@earendil-works/pi-tui": "*"
   },
   "publishConfig": {

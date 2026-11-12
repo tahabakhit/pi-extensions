@@ -14,17 +14,17 @@ Each workspace has its own version and npm release. Run these commands from the 
 ```sh
 	mkdir -p /tmp/pi-extensions-release
 	npm pack --workspace @tahabakhit/pi-statusline --ignore-scripts --pack-destination /tmp/pi-extensions-release
-	tar -tzf /tmp/pi-extensions-release/tahabakhit-pi-statusline-0.1.0.tgz
-	sha256sum /tmp/pi-extensions-release/tahabakhit-pi-statusline-0.1.0.tgz
+	tar -tzf /tmp/pi-extensions-release/tahabakhit-pi-statusline-0.2.0.tgz
+	sha256sum /tmp/pi-extensions-release/tahabakhit-pi-statusline-0.2.0.tgz
 ```
 
-Use the versioned filename that `npm pack` reports after a version change. Check the archive contents and test the extracted package outside the checkout. `npm run check` also packs a temporary artifact, checks its file list, and runs the behavioral tests against its extracted code.
+Use the versioned filename that `npm pack` reports. These examples use the footer-only 0.2.0 candidate. Pack the TUI workspace separately. Its archive contains both editor and timestamp modules. Check the archive contents and test the extracted package outside the checkout. `npm run check` also packs a temporary artifact, checks its file list, and runs the behavioral tests against its extracted code.
 
 For an installed Pi distribution, `test/host-smoke.mjs` accepts the Pi package
-directory and the extracted extension package directory as its two arguments.
+directory followed by one or more extracted extension package directories.
 It uses that distribution's loader without starting an agent or reading your
 Pi settings. It checks entrypoint imports, startup, reload, footer rendering,
-subscription disposal, and non-TUI guards. It does not test a real terminal or
+subscription disposal, non-TUI guards, and coexistence in both package orders. It does not test a real terminal or
 instantiate the editor. The loader path is internal to Pi and may change.
 
 4. Confirm that your npm account can publish to `@tahabakhit`. Review the source and archive for secrets. Before committing to the public repository, scan staged changes:
@@ -36,7 +36,7 @@ instantiate the editor. The loader path is internal to Pi and may change.
 5. With publication approval, publish the reviewed tarball, not a rebuilt workspace:
 
 ```sh
-	npm publish /tmp/pi-extensions-release/tahabakhit-pi-statusline-0.1.0.tgz --access public --ignore-scripts
+	npm publish /tmp/pi-extensions-release/tahabakhit-pi-statusline-0.2.0.tgz --access public --ignore-scripts
 ```
 
 6. Verify the registry version and contents before changing consumers. Update the root package table after publication.

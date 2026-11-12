@@ -1,0 +1,47 @@
+{
+  "name": "@tahabakhit/pi-statusline",
+  "version": "0.1.0",
+  "description": "A Pi header, native editor, context footer, token speed, and message timestamps.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Taha Bakhit",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "statusline",
+    "footer"
+  ],
+  "files": [
+    "src/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.js"
+    ]
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tahabakhit/pi-extensions.git",
+    "directory": "packages/pi-statusline"
+  },
+  "homepage": "https://github.com/tahabakhit/pi-extensions/tree/main/packages/pi-statusline",
+  "bugs": {
+    "url": "https://github.com/tahabakhit/pi-extensions/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

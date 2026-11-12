@@ -2,13 +2,13 @@
 
 `@tahabakhit/pi-statusline` replaces Pi's header, editor layout, and footer. It adds local timestamps after user messages and final replies. Tools and messages keep Pi's native rendering.
 
-Version 0.1.0 is prepared locally and has not been published. After publication, install it with:
+Install the npm package with:
 
 ```sh
 	pi install npm:@tahabakhit/pi-statusline
 ```
 
-For a local session before publication, run this from the repository root:
+To try the local source, run this from the repository root:
 
 ```sh
 	pi -e ./packages/pi-statusline

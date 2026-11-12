@@ -4,7 +4,7 @@ Independently installable extensions for [Pi](https://pi.dev), published under t
 
 | Package | Purpose | Release |
 | --- | --- | --- |
-| [@tahabakhit/pi-statusline](packages/pi-statusline/README.md) | Header, native editor, context footer, token speed, and message timestamps | 0.1.0, prepared locally, not published |
+| [@tahabakhit/pi-statusline](packages/pi-statusline/README.md) | Header, native editor, context footer, token speed, and message timestamps | [0.1.0 on npm](https://www.npmjs.com/package/@tahabakhit/pi-statusline/v/0.1.0) |
 
 Each extension lives in `packages/<name>` with its own manifest, source, tests, changelog, and license. The root is a private npm workspace, not an installable Pi bundle. Installing one package does not load the others. This layout follows [narumiruna/pi-extensions](https://github.com/narumiruna/pi-extensions). No code from that repository is included.
 
